@@ -127,6 +127,8 @@ public class BinarySearchTree implements bstADT {
                         while (true) {
                             if (inorder.getLeft() == null || inorder.getRight() == null) {
                                 System.out.println(inorder.getName() + " is the order successor");
+                                inorder.setLeft(curr.getLeft());
+                                inorder.setRight(curr.getRight());
                                 if (parent.getKey() > key){
                                     parent.setLeft(inorder);
                                 }
